@@ -19,7 +19,7 @@ class Media extends Component {
       <div className="Media" onClick = { this.handleClick } >
         <div className="Media-cover">
           <img className="Media-image"
-               src= { this.props.otro } 
+               src= {this.props.cover} 
                alt={this.props.title} 
                width={ 260 } 
                height={ 160 } />

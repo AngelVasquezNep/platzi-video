@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import Media from './media'
-import './general.sass'
+import './playlist.sass'
 
 class PlayList extends Component {
   render() {
     const playlist = this.props.data.categories[0].playlist
     console.log(this.props.data)
     return (
-      <div className="PlayList centrar">
+      <div className="Playlist ">
         {
           playlist.map(( item )=>{
-            return <Media {...item} otro ="../src/images/covers/responsive.jpg" key={item.title} />
+            return <Media {...item} key={item.title} />
           })
         }
       </div>

@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import './media.sass'
 
-class Media extends Component {
+class Media extends PureComponent {
   
   state = {
     title: this.props.title

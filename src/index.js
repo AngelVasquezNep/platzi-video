@@ -1,7 +1,7 @@
 import React from 'react'
 import {render} from 'react-dom'
 import './index.css'
-import PlayList from '@/components/playList'
+import PlayList from '@/components/playList/playList.jsx'
 // import App from './App'
 import data from './api.json'
 

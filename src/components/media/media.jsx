@@ -2,19 +2,13 @@ import React, { PureComponent } from 'react'
 import './media.sass'
 
 class Media extends PureComponent {
-  
-  state = {
-    title: this.props.title
+  handleClick = (ev) => {
+    this.props.handleOpenModal(this.props)
   }
-
-  handleClick = event => {
-    this.setState({
-      title: "Otro mal titilo"
-    })
-  }
-  
 
   render() {
+
+
     return (
       <div className="Media" onClick = { this.handleClick } >
         <div className="Media-cover">
@@ -24,7 +18,7 @@ class Media extends PureComponent {
                width={ 260 } 
                height={ 160 } />
         </div>
-        <h3 className="Media-title">{ this.state.title }</h3>
+        <h3 className="Media-title">{ this.props.title }</h3>
         <p className="Media-author"> {this.props.author} </p>
       </div>
     )

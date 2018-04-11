@@ -4,7 +4,7 @@
       "id": 1,
       "description": "Lo mejor de la semana",
       "title": "Destacados",
-      "playlist": [
+      "playList": [
         {
           "title": "¿Qué es responsive Design?",
           "cover": "/images/covers/responsive.jpg",
@@ -51,7 +51,7 @@
       "id": 2,
       "description": "Lo mejor para concentrarte",
       "title": "Para programar",
-      "playlist": [
+      "playList": [
         {
           "title": "One more time",
           "author": "Daft Punk",
@@ -98,7 +98,7 @@
       "id": 3,
       "description": "Si no te queda de otra",
       "title": "Regueton",
-      "playlist": [
+      "playList": [
         {
           "title": "Despacito",
           "author": "Luis Fonsi",

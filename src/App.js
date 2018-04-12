@@ -11,7 +11,8 @@ import ReproductorContainer from '@/components/reproductor/reproductorContainer'
 class App extends Component {
   state = {
     modalVisible: false,
-    title: ''
+    title: '',
+    botonVisible: true
   }
   
   handleOpenModal = (ev) => {
@@ -26,8 +27,14 @@ class App extends Component {
       modalVisible: false
     })
   }
-
-
+  
+  handleFullScreen = (event) => {
+    this.setState({
+      botonVisible: event
+    })
+    console.log(`Tenemos evento: ${event}`)
+  }
+  
   render() {
     return (
       <Error>
@@ -35,7 +42,6 @@ class App extends Component {
 
           <Related/>
 
-          <ReproductorContainer/>
           
           <Categories 
             categories={this.props.data.categories} 
@@ -46,9 +52,13 @@ class App extends Component {
             <ModalContainer>
               <Modal
                 handleClick = { this.handleCloseModal }
+                botonVisible = {this.state.botonVisible}
                 >
-                <h2> { this.state.infoMedia.title } </h2>
-                <p> { this.state.infoMedia.author } </p>
+                <ReproductorContainer
+                  handleFullScreen = { this.handleFullScreen }
+                  title = { this.state.infoMedia.title }
+                  src = {this.state.infoMedia.src}
+                />
               </Modal>
             </ModalContainer> 
           }

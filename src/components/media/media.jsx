@@ -2,12 +2,12 @@ import React, { PureComponent } from 'react'
 import './media.sass'
 
 class Media extends PureComponent {
+
   handleClick = (ev) => {
     this.props.handleOpenModal(this.props)
   }
 
   render() {
-
 
     return (
       <div className="Media" onClick = { this.handleClick } >

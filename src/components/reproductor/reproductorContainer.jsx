@@ -79,9 +79,16 @@ class ReproductorContainer extends Component {
   }
 
   handleFullScreen = () => {
+    console.log("Algo")
     this.setState({
       fullScreen: this.state.fullScreen ? false : true
     })
+    if(!this.state.fullScreen) {
+      console.log("Algo más: " + this.state.fullScreen)
+      this.props.handleFullScreen(this.state.fullScreen)
+    } else {
+      this.props.handleFullScreen(this.state.fullScreen)
+    }
   }
 
   render () {
@@ -90,7 +97,7 @@ class ReproductorContainer extends Component {
         fullScreen = { this.state.fullScreen }
       >
 
-        <Title title={'Titulo Hardcore'}/>
+        <Title title={ this.props.title }/>
 
         <VideoPlayerControl>
           
@@ -140,8 +147,7 @@ class ReproductorContainer extends Component {
               handleLoadedMetadata = { this.handleLoadedMetadata }
               play = { this.state.play }
               autoPlay={ this.state.play }
-              src="http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4"
-
+              src={ this.props.src }
 
         />
       </Reproductor>

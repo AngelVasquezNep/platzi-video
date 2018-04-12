@@ -5,7 +5,9 @@ function Modal (props) {
   return (
     <div className="Modal">
       { props.children }
-      <button className="Modal-close" onClick={props.handleClick} >&times;</button>
+      {
+        props.botonVisible ? <button className="Modal-close" onClick={props.handleClick} >&times;</button> : null
+      }
     </div>
   )
 }

@@ -1,9 +1,11 @@
 body 
   background-color: #171c30
-
+  margin: 0
+  
 .HomeLayout
   display: grid
   grid-template-columns: 300px 1fr
   margin: 0 auto
-  min-height: 100vh
-  
+  height: 100vh
+  @media screen and (max-width: 900px) 
+    grid-template-columns: 1fr

@@ -7,14 +7,13 @@ import Modal from '@/components/modal/modal'
 import Error from '@/components/error/error'
 import ReproductorContainer from '@/components/reproductor/reproductorContainer'
 
-
 class App extends Component {
   state = {
     modalVisible: false,
     title: '',
     botonVisible: true
   }
-  
+
   handleOpenModal = (ev) => {
     this.setState({
       modalVisible: true,

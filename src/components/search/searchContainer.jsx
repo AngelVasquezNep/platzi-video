@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import Search from './search'
+import store from '../../store'
 
 
 class SearchContainer extends Component {
@@ -9,7 +10,15 @@ class SearchContainer extends Component {
   
   handleSubmit = ev => {
     ev.preventDefault()
-    console.log(this.input.value)
+    store.dispatch({
+      type: 'ADD_SONG',
+      payload: {
+        title: this.input.value
+      }
+    })
+    this.setState({
+      value: ''
+    })
   }
 
   setInputRef = element => {

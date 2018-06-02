@@ -34,7 +34,7 @@ class Video extends Component {
           ref={ this.setRef }
           autoPlay={ this.props.play } 
           src={ this.props.src }
-          />
+        />
       </div>
     )
   }

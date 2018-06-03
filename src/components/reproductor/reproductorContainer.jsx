@@ -79,12 +79,10 @@ class ReproductorContainer extends Component {
   }
 
   handleFullScreen = () => {
-    console.log("Algo")
     this.setState({
       fullScreen: this.state.fullScreen ? false : true
     })
     if(!this.state.fullScreen) {
-      console.log("Algo más: " + this.state.fullScreen)
       this.props.handleFullScreen(this.state.fullScreen)
     } else {
       this.props.handleFullScreen(this.state.fullScreen)

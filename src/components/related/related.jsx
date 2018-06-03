@@ -18,10 +18,7 @@ function Related (props) {
         <li>El cisne negro</li>
         <li>Origen</li>
         <li>Efecto mariposa</li>
-        <li>Woodland</li>
         <li>3.19 nada es casualidad</li>
-        <li>Rudy</li>
-        <li>Gangster Americano</li>
       </ol>
     </div>
   )

@@ -6,6 +6,7 @@ class Error extends Component {
   }
 
   componentDidCatch (err, info) {
+    console.log("ERROR:APP ROTA")
     this.setState = {
       handleError: true
     }

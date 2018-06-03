@@ -6,6 +6,7 @@ import ModalContainer from '@/components/modal/modalContainer'
 import Modal from '@/components/modal/modal'
 import Error from '@/components/error/error'
 import ReproductorContainer from '@/components/reproductor/reproductorContainer'
+import {connect} from 'react-redux'
 
 class App extends Component {
   state = {
@@ -31,7 +32,6 @@ class App extends Component {
     this.setState({
       botonVisible: event
     })
-    console.log(`Tenemos evento: ${event}`)
   }
   
   render() {
@@ -43,7 +43,7 @@ class App extends Component {
 
           
           <Categories 
-            categories={this.props.data.categories} 
+            categories={this.props.categories} 
             handleOpenModal={this.handleOpenModal}
             />
           {
@@ -67,4 +67,10 @@ class App extends Component {
   }
 }
 
-export default App
+const mapStateToProps = (state, props) => {
+  return {
+    categories: state.data.categories
+  }
+}
+
+export default connect(mapStateToProps)(App)

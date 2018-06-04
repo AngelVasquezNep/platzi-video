@@ -9,7 +9,8 @@ import {createStore} from 'redux'
 import reducer from './reducers/data'
 
 const initialState = {
-  data: {...data}
+  data: {...data},
+  search: []
 }
 
 const store = createStore(

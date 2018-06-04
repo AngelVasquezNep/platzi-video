@@ -12,9 +12,13 @@ const Search = (props) => (
             placeholder="Busca tu video favorito"
             value = { props.value }
             onChange={props.handleChange}
+            autoComplete = "off"
             />
     </form>
-    <a href="https://github.com/angelvasqueznep" target="_blank" className="Usuario">
+    <a href="https://github.com/angelvasqueznep" 
+       rel="noopener noreferrer" 
+       target="_blank" 
+       className="Usuario">
       <img src="https://avatars0.githubusercontent.com/u/34588300?s=400&u=84fc5a04e5f6af8ff19b888be30fddea80532702&v=4" alt="Ángel Vásquez"/>
       <h3>Ángel Vásquez</h3>
     </a>

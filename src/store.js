@@ -1,24 +1,16 @@
+import data from '@/api.json'
 import {createStore} from 'redux'
+import reducer from './reducers/data'
 
-const initialState = [
-  { 'title': 'Despacito' },
-  { 'title': 'Hola' },
-  { 'title': 'Mundo' },
-] 
-
-const reducer = (state, action) => {
-  switch(action.type) {
-    case 'ADD_SONG':
-      return [...state, {title: action.payload.title}]
-    default:
-      return state
-  }
+const initialState = {
+  data: {...data},
+  search: []
 }
 
 const store = createStore(
   reducer,
   initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()  
 )
 
-export default store;
+export default store

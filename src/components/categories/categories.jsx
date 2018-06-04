@@ -9,12 +9,16 @@ function Categories (props) {
   return (
     <div className="Categories">
       <SearchContainer />
-      { props.search.length > 0 && <p className="Categoty-title" >Resultados de la busqueda</p>}
-      {
-        props.search.map( item=>{
-          return <Media {...item} />
-        })
-      }
+      <div className="Category-search">
+        { props.search.length > 0 && <p className="Category-title" >Resultados de la busqueda</p>}
+          {
+              props.search.map( item=>{
+                return <Media {...item}
+                handleOpenModal={props.handleOpenModal}
+                />
+              })
+        }
+      </div>
       {
         props.categories.map( category => {
           return (
